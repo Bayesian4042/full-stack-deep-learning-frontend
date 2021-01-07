@@ -99,6 +99,6 @@ jobs:
 
 
   workflows:
-    "hello workflows"
+    "hello workflows":
       jobs:
         - build
