@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: show current branch
-          command: echo ${CURRENT_BRANCH}
+          command: echo ${CIRCLE_BRANCH}
       - restore_cache:
           keys:
             - app-{{checksum "package.json"}}
@@ -99,6 +99,6 @@ jobs:
 
 
   workflows:
-    "hello workflows":
+    build-and-deploy:
       jobs:
         - build
