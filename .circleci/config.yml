@@ -10,7 +10,7 @@ jobs:
           name: Show current branch
           command: echo ${CURRENT_BRANCH}
       - restore_cache:
-          key:
+          keys:
             - app-{{ checksum "package.json" }}
             - app-
       - run:
@@ -94,6 +94,7 @@ jobs:
             else
               aws cloudfront create-invalidation --distribution-id ${DEV_DISTRIBUTION_ID} --paths /\*
             fi
+
 workflows:
   build_and_deploy:
     jobs:
