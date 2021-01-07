@@ -99,6 +99,6 @@ jobs:
 
 
   workflows:
-    build-and-deploy:
+    "hello workflows"
       jobs:
         - build
