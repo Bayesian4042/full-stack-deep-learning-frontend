@@ -10,10 +10,12 @@ jobs:
           name: show current branch
           command: echo ${CURRENT_BRANCH}
       - restore_cache:
-          key:
+          keys:
             - app-{{checksum "package.json"}}
             - app-
-
+      - run:
+          name: install dependencies
+          command: npm install
       - save_cache:
           paths:
             - node_modules
