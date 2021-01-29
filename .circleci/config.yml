@@ -315,8 +315,8 @@ workflows:
 #                - staging
 #                - master
       - terraform-validate:
-          requires:
-            - unit-test
+#          requires:
+#            - unit-test
           filters:
             branches:
               only:
