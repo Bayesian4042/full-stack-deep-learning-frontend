@@ -286,24 +286,24 @@ workflows:
   build_and_deploy:
     jobs:
       - build
-      - linting:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
-      - prettier:
-          requires:
-            - build
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
+#      - linting:
+#          requires:
+#            - build
+#          filters:
+#            branches:
+#              only:
+#                - develop
+#                - staging
+#                - master
+#      - prettier:
+#          requires:
+#            - build
+#          filters:
+#            branches:
+#              only:
+#                - develop
+#                - staging
+#                - master
       - unit-test:
           requires:
             - linting
