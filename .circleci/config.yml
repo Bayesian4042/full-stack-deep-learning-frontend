@@ -304,16 +304,16 @@ workflows:
 #                - develop
 #                - staging
 #                - master
-      - unit-test:
-          requires:
-            - linting
-            - prettier
-          filters:
-            branches:
-              only:
-                - develop
-                - staging
-                - master
+#      - unit-test:
+#          requires:
+#            - linting
+#            - prettier
+#          filters:
+#            branches:
+#              only:
+#                - develop
+#                - staging
+#                - master
       - terraform-validate:
           requires:
             - unit-test
